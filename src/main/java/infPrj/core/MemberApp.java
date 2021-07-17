@@ -7,7 +7,9 @@ import infPrj.core.member.MemberServiceImpl;
 
 public class MemberApp {
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
+        AppConfig appConfig = new AppConfig();
+
+        MemberService memberService = appConfig.memberService();
         Member memberA = new Member(1L, "memberA", Grade.BASIC);
         memberService.join(memberA);
         Member findMember = memberService.findMember(1L);
