@@ -10,7 +10,6 @@ import infPrj.core.member.MemoryMemberRepository;
 import infPrj.core.order.OrderService;
 import infPrj.core.order.OrderServiceImpl;
 
-import java.nio.file.FileStore;
 
 public class AppConfig {
     public MemberService memberService() {
