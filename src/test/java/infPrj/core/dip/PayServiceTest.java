@@ -9,21 +9,21 @@ import static org.assertj.core.api.Assertions.*;
 
 
 class PayServiceTest {
-    private PayService service = new PayService();
+    private PayService payService = new PayService();
 
     @Test
     @DisplayName("Ss 테스트")
     void SsTest() {
         Pay ssPat = new SsPay();
-        service.setPay(ssPat);
-        assertThat(service.payment()).isEqualTo("SsPay");
+        payService.setPay(ssPat);
+        assertThat(payService.payment()).isEqualTo("SsPay");
     }
 
     @Test
     @DisplayName("Ka 테스트")
     void KaTest(){
         Pay ssPat = new KaPay();
-        service.setPay(ssPat);
-        assertThat(service.payment()).isEqualTo("KaPay");
+        payService.setPay(ssPat);
+        assertThat(payService.payment()).isEqualTo("KaPay");
     }
 }
